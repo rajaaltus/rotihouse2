@@ -11,7 +11,7 @@
           <figure>
             <span class="ribbon off">-10%</span>
             <img
-              :src="`${$axios.defaults.baseURL}${dish.image.url}`"
+              :src="dish.image?`${$axios.defaults.baseURL}${dish.image.url}`:'/placeholder.png'"
               class="img-fluid lazy"
               alt=""
             />
@@ -59,9 +59,9 @@ export default {
   computed: {
     ...mapState(["category"]),
   },
-  category() {
-    return this.category.find((t) => t.id == this.$route.params.id);
-  },
+  // category() {
+  //   return this.category.find((t) => t.id == this.$route.params.id);
+  // },
   mounted() {
     this.myloading = false;
   },
