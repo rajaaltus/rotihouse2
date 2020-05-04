@@ -65,7 +65,8 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://localhost:1345'
+    // baseURL: 'http://localhost:1345'
+    baseURL: 'https://api.rotihouselao.com'
   },
   /*
   ** Build configuration
