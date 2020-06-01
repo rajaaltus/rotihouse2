@@ -150,7 +150,6 @@
           </div>
         </div>
       </aside>
-
       <nuxt-child />
     </div>
   </div>

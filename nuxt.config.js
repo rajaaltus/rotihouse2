@@ -37,13 +37,11 @@ export default {
   */
   css: [
     '@/assets/scss/styles.scss',
-    'iview/dist/styles/iview.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/iview',
     { src: 'plugins/owl.js', ssr: false }
   ],
   /*
