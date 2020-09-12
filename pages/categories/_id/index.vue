@@ -9,7 +9,7 @@
         <facebook-loader v-if="myloading" :speed="2"></facebook-loader>
         <div class="strip" v-else>
           <figure>
-            <span class="ribbon off">-10%</span>
+            <!-- <span class="ribbon off">-10%</span> -->
             <img
               :src="dish.image?`${$axios.defaults.baseURL}${dish.image.url}`:'/placeholder.png'"
               class="img-fluid lazy"
