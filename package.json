@@ -19,7 +19,8 @@
     "sass-loader": "^8.0.2",
     "v-owl-carousel": "^1.0.8",
     "vue-content-loader": "^0.2.2",
-    "vue-scrollto": "^2.17.1"
+    "vue-scrollto": "^2.17.1",
+    "vueperslides": "^2.11.0"
   },
   "devDependencies": {}
 }

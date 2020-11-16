@@ -1,22 +1,16 @@
 <template>
   <div>
     <div class="home-slider">
-      <carousel
-        :autoplay="true"
-        :dots="true"
-        :nav="false"
-        :items="1"
-        :autoHeight="true"
-        class="owl-slide cover"
-      >
-        <div
-          class="container-fluid"
-          v-for="(image, index) in mainImages"
-          :key="index"
-        >
-          <img :src="`${$axios.defaults.baseURL}${image.images[0].url}`" />
-        </div>
-      </carousel>
+      <client-only>
+        <vueper-slides lazy lazy-load-on-drag autoplay fixedHeight="400px">
+          <vueper-slide v-for="slide in mainImages" :key="slide.id" :title="slide.title" :content="slide.content" :image="$url() + slide.image.url" :duration="duration">
+            <template v-slot:loader>
+              <i class="icon icon-loader spinning"></i>
+              <span>Loading...</span>
+            </template>
+          </vueper-slide>
+        </vueper-slides>
+      </client-only>
     </div>
 
     <div class="bg_gray">
@@ -27,12 +21,7 @@
           <p>Cum doctus civibus efficiantur in imperdiet deterruisset</p>
         </div>
         <div class="row small-gutters categories_grid">
-          <Popular
-            v-for="(category, index) in categories"
-            :key="index"
-            :category="category"
-            class="my-1"
-          />
+          <Popular v-for="(category, index) in categories" :key="index" :category="category" class="my-1" />
         </div>
       </div>
     </div>
@@ -46,23 +35,13 @@
         </p>
       </div>
 
-      <carousel
-        :autoplay="true"
-        :nav="true"
-        :autoHeight="true"
-        :dots="false"
-        :margin="10"
-      >
+      <carousel :autoplay="true" :nav="true" :autoHeight="true" :dots="false" :margin="10">
         <div class="item" v-for="(item, index) in featured" :key="index">
           <facebook-loader v-if="myloading" :speed="2"></facebook-loader>
           <div class="strip" v-else>
             <figure>
-              <span class="ribbon off">-10%</span>
-              <img
-                :src="`${$axios.defaults.baseURL}${item.image.url}`"
-                :data-src="`${$axios.defaults.baseURL}${item.category.image.url}`"
-                alt=""
-              />
+              <!-- <span class="ribbon off">-10%</span> -->
+              <img :src="`${$axios.defaults.baseURL}${item.image.url}`" :data-src="`${$axios.defaults.baseURL}${item.category.image.url}`" alt="" />
               <nuxt-link :to="`/dishes/${item.id}`" class="strip_info">
                 <small>{{ item.type }}</small>
                 <div class="item_title">
@@ -102,6 +81,7 @@ export default {
   data() {
     return {
       myloading: true,
+      duration: 3000,
     };
   },
   async fetch({ store }) {
@@ -130,5 +110,9 @@ export default {
   width: 100%;
   min-height: 50vh !important;
   object-fit: cover;
+}
+.vueperslide {
+  color: white !important;
+  font-weight: 700;
 }
 </style>
