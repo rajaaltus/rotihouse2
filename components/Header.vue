@@ -1,18 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <nuxt-link class="navbar-brand shadow-lg" to="/">
-        <img src="/logo.svg" alt="" />
+      <nuxt-link class="navbar-brand shadow-lg" to="/" style="background-color: #eee;">
+        <img src="/logo.svg" alt="" class="logo-style" />
       </nuxt-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -35,3 +27,9 @@
     </div>
   </nav>
 </template>
+
+<style>
+.logo-style {
+  background-color: #eeeeee !important;
+}
+</style>

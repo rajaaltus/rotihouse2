@@ -73,6 +73,11 @@ import Popular from "@/components/Popular";
 import { mapState } from "vuex";
 import { FacebookLoader } from "vue-content-loader";
 export default {
+  head() {
+    return {
+      title: "Home",
+    };
+  },
   layout: "home",
   components: {
     Popular,

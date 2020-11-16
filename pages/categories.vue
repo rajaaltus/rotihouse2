@@ -5,18 +5,14 @@
         <div class="clearfix">
           <div class="sort_select">
             <select name="sort" id="sort">
-              <option value="popularity" selected="selected"
-                >Sort by Popularity</option
-              >
+              <option value="popularity" selected="selected">Sort by Popularity</option>
               <option value="rating">Sort by Average rating</option>
               <option value="date">Sort by newness</option>
               <option value="price">Sort by Price: low to high</option>
               <option value="price-desc">Sort by Price: high to low</option>
             </select>
           </div>
-          <a href="#0" class="open_filters btn_filters"
-            ><i class="icon_adjust-vert"></i><span>Filters</span></a
-          >
+          <a href="#0" class="open_filters btn_filters"><i class="icon_adjust-vert"></i><span>Filters</span></a>
         </div>
         <div class="filter_col">
           <div class="inner_bt">
@@ -24,9 +20,7 @@
           </div>
           <div class="filter_type">
             <h4>
-              <a href="#filter_1" data-toggle="collapse" class="opened"
-                >Categories</a
-              >
+              <a href="#filter_1" data-toggle="collapse" class="opened">Categories</a>
             </h4>
             <div class="collapse show" id="filter_1">
               <ul v-for="(category, index) in categories" :key="index">
@@ -45,9 +39,7 @@
           <!-- /filter_type -->
           <div class="filter_type">
             <h4>
-              <a href="#filter_2" data-toggle="collapse" class="closed"
-                >Rating</a
-              >
+              <a href="#filter_2" data-toggle="collapse" class="closed">Rating</a>
             </h4>
             <div class="collapse" id="filter_2">
               <ul>
@@ -85,32 +77,19 @@
           <!-- /filter_type -->
           <div class="filter_type">
             <h4>
-              <a href="#filter_3" data-toggle="collapse" class="closed"
-                >Distance</a
-              >
+              <a href="#filter_3" data-toggle="collapse" class="closed">Distance</a>
             </h4>
             <div class="collapse" id="filter_3">
-              <div class="distance">
-                Radius around selected destination <span></span> km
-              </div>
+              <div class="distance">Radius around selected destination <span></span> km</div>
               <div class="add_bottom_15">
-                <input
-                  type="range"
-                  min="10"
-                  max="100"
-                  step="10"
-                  value="30"
-                  data-orientation="horizontal"
-                />
+                <input type="range" min="10" max="100" step="10" value="30" data-orientation="horizontal" />
               </div>
             </div>
           </div>
           <!-- /filter_type -->
           <div class="filter_type">
             <h4>
-              <a href="#filter_4" data-toggle="collapse" class="closed"
-                >Price</a
-              >
+              <a href="#filter_4" data-toggle="collapse" class="closed">Price</a>
             </h4>
             <div class="collapse" id="filter_4">
               <ul>
@@ -158,6 +137,11 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  head() {
+    return {
+      title: "Our Menu / Categories",
+    };
+  },
   async fetch({ store }) {
     await store.dispatch("setCategories");
   },
