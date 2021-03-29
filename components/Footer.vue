@@ -8,9 +8,6 @@
             <div class="collapse dont-collapse-sm links" id="collapse_1">
               <ul>
                 <li><nuxt-link to="/about">About us</nuxt-link></li>
-                <li><nuxt-link to="/help">Add your restaurant</nuxt-link></li>
-                <li><nuxt-link to="/help">Help</nuxt-link></li>
-                <li><nuxt-link to="/account">My account</nuxt-link></li>
                 <li><nuxt-link to="/blog">Blog</nuxt-link></li>
                 <li><nuxt-link to="/contacts">Contacts</nuxt-link></li>
               </ul>
@@ -108,7 +105,7 @@
             <ul class="additional_links">
               <li><a href="#0">Terms and conditions</a></li>
               <li><a href="#0">Privacy</a></li>
-              <li><span>© 2019 RotiHouse</span></li>
+              <li><span>© 2021 RotiHouse</span></li>
             </ul>
           </div>
           <button type="button" class="btn btn-danger scroll-to" v-scroll-to="'body'">
@@ -118,11 +115,6 @@
       </div>
     </footer>
     <div class="layer"></div>
-    <!-- Load Facebook SDK for JavaScript -->
-
-    <!-- Your Chat Plugin code -->
-
-    <!-- Opacity Mask Menu Mobile -->
   </div>
 </template>
 
