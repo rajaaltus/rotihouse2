@@ -16,28 +16,29 @@ a {
         padding-left: 20px;
     }
 }
+
 .navbar-brand {
     position: absolute;
     top: 0px;
-    background-color: #343a40;
+    background-color: #343b40;
     display: block;
-    padding: 15px 25px;
-    width: 144px;
+    padding: 10px 25px;
+    width: 114px;
     height: auto;
     z-index: 999;
-    border-radius: .7rem;
+    border-radius: 0  0 .7rem .7em;
 
     @media (max-width: 768px) {
         // display: none !important;  
         position: relative;
         right: 0px;
-        background-color: #343a40;
+        background-color: #343b40;
         display: block;
         padding: 5px 10px;
         width: 90px;
         height: auto;
         z-index: 999;
-        border-radius: .7rem; 
+        border-radius: 0 .7rem; 
     }
 }
 .list-group-item {
